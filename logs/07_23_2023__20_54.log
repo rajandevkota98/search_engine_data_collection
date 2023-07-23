@@ -1,0 +1,5 @@
+[ 2023-07-23 20:47:54,912 ] 17 root - INFO - Extracting all
+[ 2023-07-23 20:47:59,371 ] 26 root - INFO - Removing unwanted classes
+[ 2023-07-23 20:47:59,396 ] 30 root - INFO - Deleted BACKGROUND_Google
+[ 2023-07-23 20:47:59,396 ] 36 root - INFO - --------starting data sync-----------
+[ 2023-07-23 20:50:21,438 ] 38 root - INFO - ending the sync
