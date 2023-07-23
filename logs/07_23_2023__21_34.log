@@ -1,0 +1,3 @@
+[ 2023-07-23 21:43:34,313 ] 11 root - INFO - initiating
+[ 2023-07-23 21:43:34,643 ] 21 root - INFO - registering
+[ 2023-07-23 21:43:34,643 ] 25 root - INFO - lable detail: {'num': 'hedgehog'}
