@@ -5,6 +5,9 @@ from fastapi.responses import JSONResponse
 from typing import List,Union, Any
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from search_engine.exception import CustomException
+import os,sys
+choices = {}
 
 
 app = FastAPI(title="DataCollection-Server")
@@ -22,13 +25,13 @@ def fetch_label():
         response = {"Status": "Success", "Response": str(documents[0])}
         return JSONResponse(content=response, status_code=200, media_type="application/json")
     except Exception as e:
-        raise e
+        raise CustomException(e,sys)
 
 @app.post('/add_label/{label_name}')
 def add_label(label_name: str):
     result = mongo.database['labels'].find()
     documents = [document for document in result]
-    last_value = list(map(int, list(documents[0].key())[1:]))[-1]
+    last_value = list(map(int, list(documents[0].keys())[1:]))[-1]
     response = mongo.database['labels'].update_one({"_id": documents[0]["_id"]},
                                                    {"$set": {str(last_value + 1): label_name}})
     if response.modified_count == 1:
