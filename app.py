@@ -3,6 +3,7 @@ from search_engine.utils.s3_handler import S3Connection
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 from typing import List,Union, Any
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
 
@@ -93,4 +94,4 @@ def bulk_upload(label: str, files: List[UploadFile] = File(...)):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8081)
