@@ -7,7 +7,7 @@ This repository containts code for data collection which is required to train ou
 The CI-CD pipeline is implemented while devpoling this project.
 ![CICD](https://github.com/rajandevkota98/search_engine_data_collection/raw/main/images/CICD.png)
 
-Here is the general outline of project.
+
 ![outline](https://github.com/rajandevkota98/search_engine_data_collection/blob/main/images/Screenshot%20from%202023-07-24%2010-23-06.png)
 
 # Action Workflow
@@ -58,3 +58,21 @@ export ECR_REPOSITORY_NAME=<name>
 
 export DATABASE_NAME=<name>
 ```
+
+# To run locally
+
+1. Clone the code
+2. Create a virtual environment
+```
+conda create -n new_env python=3.9 -y
+```
+3. Activate the environment
+
+```
+conda activate new_env
+```
+
+4. run the s3_setup, mongo_setup.py
+
+5. run app.py
+
