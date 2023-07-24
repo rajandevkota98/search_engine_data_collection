@@ -4,9 +4,11 @@
 This repository containts code for data collection which is required to train our embeding based image search engine.
 
 # Architecture
+The CI-CD pipeline is implemented while devpoling this project.
+![CICD](https://github.com/rajandevkota98/search_engine_data_collection/raw/main/images/CICD.png)
 
-
-
+Here is the general outline of project.
+![outline](https://github.com/rajandevkota98/search_engine_data_collection/blob/main/images/Screenshot%20from%202023-07-24%2010-23-06.png)
 
 # Action Workflow
 1. On push checkout the code and create docker container on git-hub server.
@@ -14,10 +16,11 @@ This repository containts code for data collection which is required to train ou
 3. Once action push is completed pull and run the image on Ec2 instance.
 
 
-# Github Configuration
 
 
 # Route Details
+Here is the screenshot of the route.
+![ss](https://github.com/rajandevkota98/search_engine_data_collection/blob/main/images/server.png)
 
 - /fetch : To get labels currently present in the database. Important to call as it updates in memory database.
 - /Single_upload : This Api Should be used to upload single image to s3 bucket
