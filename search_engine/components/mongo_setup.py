@@ -21,7 +21,6 @@ class MetaDataStore:
             logging.info('registering')
             records = {}
             existing_labels = set(self.mongo.database['labels'].distinct('label'))  # Get existing labels from the database
-
             for num, label in enumerate(self.labels):
                 if label not in existing_labels:
                     records[f"{num}"] = label
